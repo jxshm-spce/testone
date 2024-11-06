@@ -1,0 +1,255 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #ffffff;
+    background-color: #121212;
+}
+
+/* Header 样式 */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1rem;
+    background-color: rgba(0, 0, 0, 0.9);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+}
+
+.logo img {
+    height: 50px;
+}
+
+.nav ul {
+    display: flex;
+    list-style: none;
+}
+
+.nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+}
+
+.auth-buttons {
+    display: flex;
+    gap: 1rem;
+}
+
+.login-btn, .register-btn {
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    text-decoration: none;
+    color: white;
+}
+
+.login-btn {
+    border: 2px solid #ff4d4d;
+}
+
+.register-btn {
+    background-color: #ff4d4d;
+}
+
+/* Hero Section 样式 */
+.hero {
+    height: 100vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.hero-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.hero-bg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.7;
+}
+
+.hero-content {
+    text-align: center;
+    padding: 2rem;
+    z-index: 1;
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    color: #ff4d4d;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 1rem 2rem;
+    background-color: #ff4d4d;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+/* 添加新的样式 */
+
+/* 通用部分样式 */
+.section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: #ff4d4d;
+}
+
+/* 关于我们部分样式 */
+.about {
+    padding: 100px 20px;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+.about-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.about-content {
+    text-align: center;
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 10px;
+}
+
+.about-text p {
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+    line-height: 1.8;
+}
+
+/* 服务项目部分样式 */
+.services {
+    padding: 100px 20px;
+    min-height: 100vh;
+}
+
+.services-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.service-posters {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.poster {
+    position: relative;
+    width: 500px;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.poster img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.poster:hover img {
+    transform: scale(1.05);
+}
+
+.poster-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 20px;
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+    transform: translateY(100%);
+    transition: transform 0.3s ease;
+}
+
+.poster:hover .poster-overlay {
+    transform: translateY(0);
+}
+
+/* 联系我们部分样式 */
+.contact {
+    padding: 100px 20px;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+.contact-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.contact-content {
+    display: flex;
+    justify-content: center;
+}
+
+.qr-code {
+    text-align: center;
+}
+
+.qr-code img {
+    width: 300px;
+    height: 300px;
+    object-fit: contain;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+}
+
+.qr-code img:hover {
+    transform: scale(1.05);
+}
+
+.qr-code p {
+    margin-top: 1rem;
+    font-size: 1.2rem;
+}
+
+/* 响应式调整 */
+@media (max-width: 768px) {
+    .poster {
+        width: 100%;
+        max-width: 400px;
+    }
+    
+    .qr-code img {
+        width: 250px;
+        height: 250px;
+    }
+}
